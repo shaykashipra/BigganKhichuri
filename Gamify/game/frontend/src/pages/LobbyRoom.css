@@ -1,0 +1,51 @@
+.lobby-room-container {
+  padding: 40px;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: white;
+  min-height: 100vh;
+}
+
+.lobby-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.car-lineup {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.car-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lobby-car {
+  width: 120px;
+  height: auto;
+}
+
+.player-label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.lobby-controls {
+  margin-top: 20px;
+}
+
+.start-btn, .leave-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}

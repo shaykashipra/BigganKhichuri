@@ -1,0 +1,228 @@
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    width: 300px;
+    height: 400px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+}
+
+.chatbox__header {
+    background: #4a90e2;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox__header-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+}
+
+.chatbox__content--header {
+    flex: 1;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.chatbox__description--header {
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+}
+
+.chatbox__messages {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.messages__item {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    max-width: 80%;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.messages__item--operator {
+    background: #e3f2fd;
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    background: #f1f1f1;
+    margin-right: auto;
+}
+
+.chatbox__footer {
+    padding: 15px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.chatbox__footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.voice-input-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a90e2;
+    transition: all 0.3s ease;
+}
+
+.voice-input-button:hover {
+    background: #f0f7ff;
+    transform: scale(1.1);
+}
+
+.voice-input-button.listening {
+    animation: pulse 1.5s infinite;
+    background: #fee2e2;
+}
+
+.voice-input-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.chatbox__send--footer {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chatbox__send--footer:hover {
+    background: #357abd;
+}
+
+.chatbox__button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #4a90e2;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.chatbox__button:hover {
+    transform: scale(1.1);
+}
+
+.chatbox__button.voice-command-enabled {
+    background: #ef4444;
+    animation: pulse 2s infinite;
+}
+
+.chatbox__button svg {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+.voice-command-toggle {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.voice-command-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.voice-command-toggle.active {
+    background: #ef4444;
+    animation: pulse 2s infinite;
+}
+
+.voice-command-toggle.active:hover {
+    background: #dc2626;
+}

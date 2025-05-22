@@ -1,0 +1,56 @@
+.physics-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.physics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.physics-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.add-content-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-content-button:hover {
+    background-color: #357abd;
+}
+
+.subsegments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .physics-container {
+        padding: 1rem;
+    }
+
+    .physics-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .add-content-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,153 @@
+.math-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.math-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.math-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.add-content-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-content-button:hover {
+    background-color: #357abd;
+}
+
+.subsegments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Trigonometry Simulation Styles */
+.trig-simulation {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.angle-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.angle-input label {
+    font-weight: 500;
+    color: #555;
+}
+
+.angle-input input[type="range"] {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    background: #ddd;
+    border-radius: 3px;
+    outline: none;
+}
+
+.angle-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4a90e2;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.angle-input input[type="range"]::-webkit-slider-thumb:hover {
+    background: #357abd;
+}
+
+.angle-input span {
+    min-width: 60px;
+    font-weight: 500;
+    color: #333;
+}
+
+.unit-circle {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+#unitCircleCanvas {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trig-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.trig-values p {
+    margin: 0;
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.trig-values span {
+    font-weight: 500;
+    color: #4a90e2;
+}
+
+@media (max-width: 768px) {
+    .math-container {
+        padding: 1rem;
+    }
+
+    .math-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .add-content-button {
+        width: 100%;
+    }
+
+    .angle-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .angle-input span {
+        text-align: center;
+    }
+
+    .trig-values {
+        grid-template-columns: 1fr;
+    }
+}
